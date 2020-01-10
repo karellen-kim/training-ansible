@@ -1,0 +1,5 @@
+- name : Quick Start
+  hosts : all
+  tasks :
+    - name : Make temporary directory
+      shell : "mkdir -p /home/deploy/tmp"
