@@ -69,3 +69,17 @@ all:
 ```
 `ansible-playbook playbooks/simple.yml -i host/front`
 `ansible-playbook playbooks/simple.yml -i host/front -l first`
+* Copy files
+```yml
+- name : Files
+  hosts : all
+  tasks :
+  - name : Make files
+    copy :
+      content : 'some content'
+      dest : /home/deploy/tmp/content.txt
+  - name : Copy files
+    copy :
+      src : ../templates/example.txt
+      dest : /home/deploy/tmp/example.txt
+```
